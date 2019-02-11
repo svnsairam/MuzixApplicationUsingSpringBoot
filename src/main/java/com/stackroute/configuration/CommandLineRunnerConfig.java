@@ -22,7 +22,7 @@ public class CommandLineRunnerConfig implements org.springframework.boot.Command
 
     @Override
     public void run(String args[]) throws Exception {
-        Track track = new Track(Integer.parseInt(environment.getProperty("id")), environment.getProperty("name"), environment.getProperty("comments"));
+        Track track = new Track(Integer.parseInt(environment.getProperty("id")),environment.getProperty("name"),environment.getProperty("comments"));
         trackRepository.save(track);
     }
 }
